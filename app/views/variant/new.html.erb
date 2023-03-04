@@ -1,0 +1,15 @@
+<h1>Add new Variant</h1>
+
+<%= form_tag :action => 'create' do %>
+
+<p><label for = "variant_name">Variant Name</label>:
+<%= text_field 'variants', 'varname' %></p>
+
+<p><label for = "variant_price">Variant Price</label>:
+<%= text_field 'variants', 'price' %></p>
+
+
+<%= submit_tag "Create" %>
+
+<% end -%>
+<%= link_to 'Back', :back %>

@@ -1,0 +1,23 @@
+<h1><%= @prod.productName %></h1>
+
+<p>
+   <strong>Name: </strong> <%= @prod.productName %><br />
+   <strong>Created Date:</strong> <%= @prod.created_at %><br />
+
+   <br>
+   <strong>Variants: </strong>
+ <% @prod.variants.each do |c| %>
+
+   <li>
+   <%=  c.varname -%>
+   $<%=  c.price -%>
+   <%= link_to "Show details", product_variant_path(c)  %>
+   </li>
+
+<%= link_to "Add variant", new_product_variant_path(c)  %>
+   <% end %>
+</p>
+
+<hr />
+
+<%= link_to 'Back', {:action => 'list'} %>

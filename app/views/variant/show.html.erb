@@ -1,0 +1,6 @@
+<h1>Variant Name: <%= @var.varname %></h1>
+<h1>Variant Price: $<%= @var.price %></h1>
+
+
+<%= link_to "Delete", {:action => 'delete', :id => @var.id} %>
+<%= link_to 'Back', :back %>
